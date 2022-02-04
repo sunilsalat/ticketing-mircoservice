@@ -51,7 +51,7 @@ const orderDetail = ({ order, currentUser }) => {
       <h1>TIcket - {order.ticket.title}</h1>Time-left to Pay : {timeLeft}
       <StripeCheckout
         token={({ id }) => doRequest({ token: id })}
-        stripeKey="pk_test_51Jog3MSBCc77iNKMhNwsbu9u5rd3E5TM6oFyXjTDcwFCrftvSVMtvbY88Ym4qDyRGUmhmBSDnPcB4YrITlGi5WuG00EPeuNMvu"
+        stripeKey="pk_test_51"
         email={currentUser.email}
         amount={order.ticket.price * 100}
       />
