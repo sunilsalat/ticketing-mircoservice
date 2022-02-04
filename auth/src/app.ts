@@ -3,7 +3,7 @@ import { app } from "./index";
 
 //connecting to db...
 const start = async () => {
-  console.log("starting up...");
+  console.log("starting up....");
   try {
     await mongoose.connect(process.env.MONGO_URI!);
     console.log("connected to db ...");
