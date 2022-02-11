@@ -16,6 +16,12 @@ spec:
         - name: client
           image: client
           imagePullPolicy: Never
+          env:
+            - name: STRIPE_PK
+              valueFrom:
+                secretKeyRef:
+                  name: stripe-pk
+                  key: STRIPE_PK
 ---
 apiVersion: v1
 kind: Service
