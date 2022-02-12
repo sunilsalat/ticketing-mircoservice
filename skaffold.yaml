@@ -8,7 +8,7 @@ build:
   local:
     push: false
   artifacts:
-    - image: auth
+    - image: sunilsalat/auth
       context: auth
       docker:
         dockerfile: Dockerfile
@@ -17,7 +17,7 @@ build:
           - src: "src/**/*.ts"
             dest: .
 
-    - image: client
+    - image: sunilsalat/client
       context: client
       docker:
         dockerfile: Dockerfile
@@ -26,7 +26,7 @@ build:
           - src: "**/*.js"
             dest: .
 
-    - image: ticket
+    - image: sunilsalat/ticket
       context: tickets
       docker:
         dockerfile: Dockerfile
@@ -35,7 +35,7 @@ build:
           - src: "src/**/*.ts"
             dest: .
 
-    - image: order
+    - image: sunilsalat/order
       context: orders
       docker:
         dockerfile: Dockerfile
@@ -44,7 +44,7 @@ build:
           - src: "src/**/*.ts"
             dest: .
 
-    - image: expiration
+    - image: sunilsalat/expiration
       context: expiration
       docker:
         dockerfile: Dockerfile
@@ -53,7 +53,7 @@ build:
           - src: "src/**/*.ts"
             dest: .
 
-    - image: payment
+    - image: sunilsapayment
       context: payments
       docker:
         dockerfile: Dockerfile
