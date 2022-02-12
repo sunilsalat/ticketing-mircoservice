@@ -13,7 +13,7 @@ app.use(
   })
 );
 
-import { paymentRouter } from "./routes/paymentRouter";
+import  {paymentRouter}  from "./routes/paymentRouter";
 import { errorHandler, CurrentUserMiddleware } from "@newsssticketing/common";
 
 app.use(CurrentUserMiddleware);
