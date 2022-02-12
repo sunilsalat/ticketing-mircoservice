@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: client
-          image: client
-          imagePullPolicy: Never
+          image: sunilsalat/client
           env:
             - name: STRIPE_PK
               valueFrom:

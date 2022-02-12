@@ -14,8 +14,7 @@ spec:
     spec:
       containers:
         - name: expiration-depl
-          image: expiration
-          imagePullPolicy: Never
+          image: sunilsalat/expiration
           env:
             - name: NATS_CLIENT_ID
               valueFrom:
