@@ -38,7 +38,7 @@ const cratePayment = async (req: Request, res: Response) => {
   });
 
   const payment = Payment.build({
-    orderId,
+    orderId: order.id,
     stripeId: charge.id,
   });
 
@@ -50,7 +50,7 @@ const cratePayment = async (req: Request, res: Response) => {
     stripeId: payment.stripeId,
   });
 
-  res.status(201).send({ id: payment.id });
+  res.status(201).send();
 };
 
 export { cratePayment };

@@ -12,7 +12,10 @@ router
   .route("/")
   .post(
     RequireAuthMiddleware,
-    [body("token").not().isEmpty(), body("orderId").not().isEmpty()],
+    [
+      body("token").notEmpty().withMessage("Token is required"),
+      body("orderId").notEmpty().withMessage("OrderId is required"),
+    ],
     ValidateRequest,
     cratePayment
   );
